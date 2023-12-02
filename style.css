@@ -1,0 +1,471 @@
+@import url('https://fonts.googleapis.com/css2?family=Montagu+Slab:opsz,wght@16..144,500&family=Montserrat:wght@600&display=swap');
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Montagu Slab', serif;
+    font-family: 'Montserrat', sans-serif;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+
+
+}
+:root{
+    --main-color:#fe5b3d;
+    --second-color:#ffac38;
+    --text-color:#444;
+    --gradient--:linear-gradient(#fe5b3d,#ffac38);
+
+
+}
+html::-webkit-scrollbar{
+    width: 0.5rem;
+
+}
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+html::-webkit-scrollbar-thumb{
+    background:var(--main-color);
+    border-radius: 5rem;
+}
+section{
+    padding: 50px 100px;
+}
+nav{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right:0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #eeeff1;
+    padding: 15px 100px;
+
+
+}
+.logo img{
+    width: 40px;
+
+}
+.navbar{
+    display: flex;
+}
+.navbar li{
+    position: relative;
+
+}
+.navbar a{
+    font-size: 1rem;
+    padding: 10px 20px;
+    color: #444;
+
+}
+.navbar a::after {
+    content: "";
+    width: 0;
+    height: 3px;
+    background: var(--gradient--);
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    transition: 0.5s;
+
+}
+.navbar a:hover::after{
+    width: 100%;
+}
+#menu-btn{
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10001;
+    display: none;
+}
+.navbtn a{
+    padding: 10px 20px;
+    color: #444;
+
+
+}
+.navbtn .sign-in{
+    background: #474fa0;
+    color: #fff;
+    border-radius: 0.5rem;
+}
+.sign-in:hover{
+    background: var(--main-color)
+}
+.home{
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    background: url(img/Car\ Website\ –\ 1@2x.png);
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: cover;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2,1fr);
+
+
+}
+.text h1{
+    font-size: 3rem;
+    letter-spacing:2px ;
+
+}
+.text span{
+    color: var(--main-color);
+
+}
+.text p{
+    margin:    0.5rem 0 1rem;
+
+ 
+}
+.appstore{
+    display: flex;
+}
+.appstore img{
+    width: 100px;
+    margin-right: 1rem;
+    cursor: pointer;
+
+
+}
+.formcon form{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    position: absolute;
+    bottom: 4rem;
+    left: 100px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 0.5rem;
+
+
+}
+.inputbox{
+    flex: 1 1 7rem;
+
+    display: flex;
+    flex-direction: column;
+
+}
+.inputbox span{
+    font-weight: 600;
+
+}
+.inputbox input{
+    padding: 7px;
+    font-weight: 600;
+    outline: none;
+    border: none;
+    background-color: #eeeff1;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+
+}
+.formcon form .btn{
+    /* flex: 1 1 7rem; */
+    padding: 18px 35px;
+    border: none;
+    border-radius: 0.5rem;
+    background:#474fa0 ;
+    font-size: 1rem;
+    color: #fff;
+
+
+}
+.formcon form .btn:hover{
+    background: var(--main-color);
+}
+.heading {
+    text-align: center;
+}
+.heading span{
+    text-transform: uppercase;
+}
+.heading h1{
+    font-size: 2rem;
+}
+.ridecon{
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit,minmax(250px,auto));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+.ridecon .box{
+    text-align: center;
+    padding: 20px;
+    
+}
+.ridecon .box .bx{
+    font-size: 34px;
+    padding: 10px;
+    background: #eeeff1;
+    border-radius: 0.5rem;
+    color: var(--main-color);
+}
+.ridecon .box h2{
+    font-size: 1.3rem;
+    margin: 1.4rem 0 0.5rem;
+}
+.ridecon .box .bx:hover,.ridecon .bx .ri-home-line{
+    background: var(--gradient--);
+    color: #fff;
+}
+.servicecon{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,auto));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+.servicecon .box{
+    padding: 10px;
+    border-radius: 1rem;
+    box-shadow: 1px 4px 41px rgba(0, 0, 0, 0.1) ;
+}
+.servicecon .box .boximg{
+    width: 100%;
+    height: 200px;
+
+
+}
+.servicecon .box .boximg img{
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    object-fit: cover;
+    object-position: center;
+
+}
+.servicecon .box p{
+    padding: 0 10px;
+    border: 1px solid var(--text-color);
+    width: 58px;
+    border-radius: 0.5rem;
+    margin: 1rem 0 1rem;
+
+
+}
+.servicecon .box h2{
+    font-size: 1.1rem;
+    color: var(--main-color);
+    margin:0.2rem 0 0.5rem;
+
+}
+.servicecon .box h2 span{
+    font-size: 0.8rem;
+    color: var(--text-color);
+
+    
+}
+.servicecon .box .btn{
+    display: flex;
+    justify-content: center;
+    background: #474fa0;
+    color: #fff;
+    padding: 10px;
+    border-radius: 0.5rem;
+
+}
+.servicecon .box .btn:hover{
+    background: var(--main-color);
+
+
+}
+#about{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(17rem,auto));
+    align-items: center;
+    gap: 1.5rem;
+
+}
+.aboutimg img{
+    width: 100%;
+    border-radius: 0.8rem;
+
+}
+.abouttext h2{
+    font-size: 1.7rem;
+    color: var(--main-color);
+
+}
+.abouttext p{
+    font-size: 0.8rem;
+    margin: 0.5rem 0 1.1rem;
+}
+.abouttext .btn {
+    /* flex: 1 1 7rem; */
+    padding: 10px 35px;
+    border: none;
+    border-radius: 0.5rem;
+    background:#474fa0 ;
+    font-size: 1rem;
+    color: #fff;
+    
+
+
+}
+.customercontainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(17rem,auto));
+    align-items: center;
+    gap: 1.5rem;
+
+}
+.customercontainer .box{
+    padding: 20px;
+    box-shadow: var(--box-shadow);
+    border-radius: 0.5rem;
+    text-align: center;
+
+}
+.star .ri-star-line{
+    color: yellow;
+}
+.customercontainer .box p{
+    font-size: 0.8rem;
+
+}
+.customercontainer .box h2{
+    font-size: 1.1em;
+    font-weight: 600;
+    margin: 0.5rem 0 0.5rem;
+
+}
+.customercontainer .box img{
+    width: 70px;
+    height: 75px;
+    border-radius: 50%;
+    object-fit: cover;
+
+}
+.customercontainer .box:hover{
+
+    background: var(--main-color);
+    color: var(--bg-color);
+    transition: 0.2s all linear;
+}
+.newsletter{
+    /* height: 20vh; */
+    background: linear-gradient(to top right,#fe5b3d,#ffac38);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.newsletter h2{
+    color: #fff;
+    font-size: 1.85rem;
+
+
+}
+.newsletter .box{
+    margin-top: 1rem;
+    background: #fff;
+    border-radius: 0.5rem;
+    padding: 4px 8px;
+    width: 360px;
+    display: flex;
+    justify-content: space-between;
+
+}
+.newsletter .box input{
+    border: none;
+    outline: none;
+}
+.newsletter .box .btn{
+    background: #474fa0;
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 8px;
+}
+.cop{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1ch;
+}
+
+@media (max-width:991px){
+    nav{
+        padding: 18px 40px;
+    }
+    section{
+        padding: 50px 40px;
+    }
+}
+@media (max-width:881){
+    .home{
+        background-position: left;
+    }
+    .formcon form{
+        bottom: 0.2rem;
+        left: 48px;
+    }
+}
+@media (max-width:768px){
+    nav{
+        padding: 11px 40px;
+
+    }
+    .home{
+        background-position: left;
+    }
+    
+    .sign-up{
+        display: none;
+    }
+    #menu-btn{
+        display: initial;
+
+    }
+    .text h1{
+        font-size: 2.5rem;
+        
+    }
+    .home {
+        grid-template-columns: 1fr;
+
+    }
+    .formcon form{
+        position: unset;
+    }
+    nav .navbar{
+        position: absolute;
+        top: -570px;
+        /* align-items: center; */
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        /* padding: 30px; */
+        background: #eeeff1;
+        transition: 0.2s ease;
+        /* margin: 30px; */
+        box-shadow: 0 4px 4px rgba(64, 47, 6, 0.591)
+    }
+    .navbar a{
+        padding: 1rem;
+        border-left: 2px solid var(--main-color);
+        margin: 1rem;
+        display: block;
+
+    }
+    .navbar.active{
+        top: 100% ;
+    }
+
+
+}
